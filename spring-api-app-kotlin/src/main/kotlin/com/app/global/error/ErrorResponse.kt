@@ -6,10 +6,10 @@ import java.lang.StringBuilder
 
 class ErrorResponse(
     private val errorCode: String,
-    private val errorMessage: String,
+    private val errorMessage: String?,
 ) {
     companion object {
-        fun of(errorCode: String, errorMessage: String): ErrorResponse {
+        fun of(errorCode: String, errorMessage: String?): ErrorResponse {
             return ErrorResponse(
                 errorCode = errorCode,
                 errorMessage = errorMessage,
