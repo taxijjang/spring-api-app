@@ -20,13 +20,13 @@ class GlobalExceptionHandler {
 
     @ExceptionHandler(MethodArgumentTypeMismatchException::class)
     protected fun handleMethodArgumentTypeMismatchException(e: MethodArgumentTypeMismatchException): ResponseEntity<ErrorResponse> {
-        val errorResponse = ErrorResponse(HttpStatus.BAD_REQUEST.toString(), e.message)
+        val errorResponse = ErrorResponse.of(HttpStatus.BAD_REQUEST.toString(), e.message)
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorResponse)
     }
 
     @ExceptionHandler(HttpRequestMethodNotSupportedException::class)
     protected fun handleHttpRequestMethodNotSupportedException(e: HttpRequestMethodNotSupportedException): ResponseEntity<ErrorResponse> {
-        val errorResponse = ErrorResponse(HttpStatus.METHOD_NOT_ALLOWED.toString(), e.message)
+        val errorResponse = ErrorResponse.of(HttpStatus.METHOD_NOT_ALLOWED.toString(), e.message)
         return ResponseEntity.status(HttpStatus.METHOD_NOT_ALLOWED).body(errorResponse)
     }
 

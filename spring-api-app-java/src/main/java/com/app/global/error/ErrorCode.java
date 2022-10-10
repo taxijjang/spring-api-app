@@ -5,9 +5,9 @@ import org.springframework.http.HttpStatus;
 
 @Getter
 public enum ErrorCode {
-    ;
+    TEST(HttpStatus.INTERNAL_SERVER_ERROR, "001", "business exception test");
 
-    ErrorCode(String errorCode, HttpStatus httpStatus, String message) {
+    ErrorCode(HttpStatus httpStatus, String errorCode, String message) {
         this.errorCode = errorCode;
         this.httpStatus = httpStatus;
         this.message = message;

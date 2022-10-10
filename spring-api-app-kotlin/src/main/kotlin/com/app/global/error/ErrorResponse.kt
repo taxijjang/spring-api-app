@@ -5,8 +5,8 @@ import org.springframework.validation.FieldError
 import java.lang.StringBuilder
 
 class ErrorResponse(
-    private val errorCode: String,
-    private val errorMessage: String?,
+    val errorCode: String,
+    val errorMessage: String?,
 ) {
     companion object {
         fun of(errorCode: String, errorMessage: String?): ErrorResponse {
