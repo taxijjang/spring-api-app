@@ -1,4 +1,4 @@
-package com.app.global.config;
+package com.app.global.config.web;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
