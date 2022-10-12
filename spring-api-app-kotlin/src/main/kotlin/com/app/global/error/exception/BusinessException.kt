@@ -6,3 +6,4 @@ import java.lang.RuntimeException
 class BusinessException(val errorCode: ErrorCode) : RuntimeException(
     errorCode.message
 )
+
